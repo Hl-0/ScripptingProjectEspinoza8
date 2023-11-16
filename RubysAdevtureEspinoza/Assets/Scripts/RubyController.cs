@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 using UnityEngine.UIElements;
 
-public class NewBehaviourScript : MonoBehaviour
+public class RubyController : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
     float horizontal;
@@ -22,13 +22,14 @@ public class NewBehaviourScript : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
     }
-    private void FixedUpdate()
+    
+    void FixedUpdate()
     {
 
         Vector2 position = rigidbody2d.position;
-        position.x = position.x + 5.0f * horizontal * Time.deltaTime;
-        position.y = position.y + 5.0f * vertical * Time.deltaTime;
-        
+        position.x = position.x + 3.0f * horizontal * Time.deltaTime;
+        position.y = position.y + 3.0f * vertical * Time.deltaTime;
+
         rigidbody2d.MovePosition(position);
 
     }
