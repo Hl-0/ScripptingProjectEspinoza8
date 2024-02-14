@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class notes : MonoBehaviour
-{/*
+public class DestroyOther : MonoBehaviour
+{
+    public GameObject other;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,9 @@ public class notes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity = Mathf.Lerp(light.intensity, 8f, 0.5f);
+        if(Input.GetKeyUp(KeyCode.E))
+        {
+            Destroy(other);
+        }
     }
-    */
 }
